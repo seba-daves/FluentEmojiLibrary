@@ -2,7 +2,10 @@
 ![alt text](img/logo-emoji-library.png "")
 A web tool to browse Microsoft's Fluent Emojis
 
-## Installing:
+## Prerquisites
+You'll need a PHP capable server and Python
+
+## Installing
 * Clone this repo with `git clone https://github.com/seba-daves/FluentEmojiLibrary.git`
 * Clone Microsoft's Fluent Emoji Repo with: `git clone https://github.com/microsoft/fluentui-emoji.git`
 * Move the `/assets` folder from Microsoft's repo, to the install folder of The Fluent Emoji Library
