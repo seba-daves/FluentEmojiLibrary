@@ -1,4 +1,5 @@
 # The Fluent Emoji Library
+![alt text](img/logo-emoji-library.png "")
 A web tool to browse Microsoft's Fluent Emojis
 
 ## Installing:
