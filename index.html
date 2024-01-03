@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Fluent Emoji Library</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="icon" href="./favicon.ico">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script type="module" src="https://unpkg.com/@fluentui/web-components@2.5.16/dist/web-components.min.js"></script>
+        <script>
+            function NewEmoji(){
+                let name=document.getElementById("emojiCode").value;
+                document.getElementById("emojiPNG").setAttribute("src","./api.php?emoji="+encodeURI(name)+"&style=3d");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="background-behind">
+        </div>
+        <div class="page-wrap">
+            <fluent-card class="default-card">
+                <br/>
+                <h3>
+                Fluent Emoji Library
+                </h3>
+                <br/>
+                <img width="60px" src="./api.php?emoji=%F0%9F%98%86&style=3d">
+                <br/>
+                <br/>
+                <fluent-divider></fluent-divider>
+                <br/>
+                <h2>Find Yours</h2>
+                <h5>Type Your Emoji To Get The PNG</h5>
+                <br/>
+                <br/>
+                <img id="emojiPNG" class="preview" width="160px" src="./api.php?emoji=🥰&style=3d">
+                <br/>
+                <br/>
+                <div class="search">
+                    <fluent-text-field id="emojiCode" pattern="[\\uD83C-\\uDBFF\\uDC00-\\uDFFF]" emoji type="emoji" appearance="outline" placeholder="&#x1f970;">
+                    </fluent-text-field>
+                    &nbsp;
+                    <fluent-button style="top: -15px;" appearance="accent" onclick="NewEmoji()">Go!</fluent-button>
+                </div>
+                <br/>
+                <fluent-divider></fluent-divider>
+                <br/>
+                <h2>Thank You For Visiting</h2>
+                <br/>
+                <br/>
+                <div id="all-emoji">
+                    <img width="100px" src="./api.php?emoji=%F0%9F%98%9C&style=3d">
+                    <img width="100px" src="./api.php?emoji=%F0%9F%A4%97&style=3d">
+                    <img width="100px" src="./api.php?emoji=%F0%9F%98%B4&style=3d">
+                    <img width="100px" src="./api.php?emoji=%F0%9F%A4%AE&style=3d">
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <fluent-divider></fluent-divider>
+                <br/>
+                <p>Made with &nbsp;<img class="heart" width="13px" src="./api.php?emoji=%E2%9D%A4%EF%B8%8F&style=3d"></p>
+                <p style="padding: 5px;"><a href="https://github.com/seba-daves/FluentEmojiLibrary/">GitHub</a></p>
+                <p style="padding: 5px;padding-bottom: 15px;">Fluent Emojis by <a href="https://github.com/microsoft/fluentui-emoji">Microsoft</a></p>
+            </fluent-card>
+            <br/>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+* {
+    font-family: 'SegoeUIV';
+    margin: auto;
+    padding: 0px;
+    text-align: center;
+}
+@font-face {
+    font-family: 'SegoeUIV';
+    src: url('../css/segoeui.ttf');
+}
+.heart{
+    animation: heart 2s ease-in-out infinite;
+}
+.preview{
+    transition-duration: 2s;
+    transform: rotate(0deg);
+}
+.preview:hover{
+    animation: swing 2s ease-in-out;
+}
+@keyframes swing {
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(-10deg);}
+    50%{transform: rotate(10deg);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes heart {
+    0%{transform: scale(1);}
+    50%{transform:scale(1.3);}
+    100%{transform: scale(1);}
+}
+.page-wrap {
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px;
+    width: 100%;
+}
+.background-behind{
+    top:0px;
+    left:0px;
+    right:0px;
+    filter: blur(50px);
+    z-index: 8;
+    min-width:100%;
+    min-height:100vh;
+    background-image: url("../img/background.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+@media only screen and (max-width: 600px) {
+    .background-behind{
+        background-image: none;
+    }
+    .default-card{
+        margin-top: 0px;
+        top: 0px;
+    }
+}
+.default-card{
+    margin-top: 80px;
+    max-width: 500px;
+}
