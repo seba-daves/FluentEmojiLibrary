@@ -1,4 +1,4 @@
-# FluentEmojiLibrary
+# The Fluent Emoji Library
 A web tool to browse Microsoft's Fluent Emojis
 
 ## Installing:
